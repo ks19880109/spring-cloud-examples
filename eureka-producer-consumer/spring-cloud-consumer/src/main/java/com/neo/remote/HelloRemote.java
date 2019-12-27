@@ -10,10 +10,11 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Created by summer on 2017/5/11.
  */
 @FeignClient(name= "spring-cloud-producer")
+@RequestMapping("/he")
 public interface HelloRemote {
 
     @RequestMapping(value = "/hello")
-    public String hello(@RequestParam(value = "name") String name);
+    String hello(@RequestParam(value = "name") String name);
 
 
 }
